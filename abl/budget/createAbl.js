@@ -13,7 +13,7 @@ const dashboardDao = require("../../dao/dashboard-dao.js");
 const schema = {
     type: "object",
     properties: {
-        name: { type: "string", minLength: 3 },
+        name: { type: "string", minLength: 3, default: "New Budget" },
         moneyLimit: { type: "integer", minimum: 0 },
         granule: { type: "string", default: "month" },
         remainingBudget: { type: "integer", minimum: 0 },

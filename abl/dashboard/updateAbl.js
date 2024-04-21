@@ -48,16 +48,17 @@ async function UpdateAbl(req, res) {
             return;
         }
 
-
         const chartList = chartDao.list();
 
         expenseCategories = expenseCategories.map((c) => c.toLowerCase());
-        if (!expenseCategories.includes(dashboard.category.toLowerCase())) {
-            res.status(400).json({
-                code: "categoryIsNotValid",
-                message: `Category ${dashboard.category} is not valid. Valid categories are: ${expenseCategories.join(", ")}`,
-            });
-            return;
+        if (dashboard.category) {
+            if (!expenseCategories.includes(dashboard.category.toLowerCase())) {
+                res.status(400).json({
+                    code: "categoryIsNotValid",
+                    message: `Category ${dashboard.category} is not valid. Valid categories are: ${expenseCategories.join(", ")}`,
+                });
+                return;
+            }
         }
         else if (!chartList.some((u) => u.id === dashboard.chartId)) {
             res.status(404).json({
