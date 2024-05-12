@@ -1,0 +1,33 @@
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.icon-container {
+    cursor: pointer; 
+}
+
+.user-info-modal {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    width: 300px;
+    margin: auto;
+    text-align: left;
+}
+
+.user-info-modal h3 {
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.user-info-modal p {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 5px 0;
+}
