@@ -13,8 +13,6 @@ function Dashboard({ category, color, refreshTrigger, users }) {
     const [budget, setBudget] = useState(10000);
     const [total, setTotal] = useState(1850);
     const [showBudgetInfo, setShowBudgetInfo] = useState(false);
-    const [isModalOpen, setModalOpen] = useState(false);
-    const [modalContent, setModalContent] = useState(null);
     const [chartType, setChartType] = useState('bar');
     const [dataGranularity, setDataGranularity] = useState('daily');
     const [timeFrame, setTimeFrame] = useState('this month');
@@ -104,16 +102,16 @@ function Dashboard({ category, color, refreshTrigger, users }) {
     };    
 
     const aggregateDailyData = (data) => {
-    const dailyData = data.reduce((acc, item) => {
-        const dateKey = item.date.slice(0, 10);
-        if (!acc[dateKey]) {
-            acc[dateKey] = { date: dateKey, amount: 0 };
-        }
-        acc[dateKey].amount += item.amount;
-        return acc;
-    }, {});
-    return Object.values(dailyData).sort((a, b) => new Date(a.date) - new Date(b.date));
-};
+        const dailyData = data.reduce((acc, item) => {
+            const dateKey = item.date.slice(0, 10);
+            if (!acc[dateKey]) {
+                acc[dateKey] = { date: dateKey, amount: 0 };
+            }
+            acc[dateKey].amount += item.amount;
+            return acc;
+        }, {});
+        return Object.values(dailyData).sort((a, b) => new Date(a.date) - new Date(b.date));
+    };
     
     const filteredData = dataGranularity === 'daily' ? 
         aggregateDailyData(data.filter(item => {
@@ -174,7 +172,8 @@ function Dashboard({ category, color, refreshTrigger, users }) {
                 </div>
             );
         };
-
+    
+    // Modal content for chart settings. It could have been a separate component but for simplicity I decided to keep it here.
     const chartSettingsModal = (
         <div>
             <div className="settings-section">
@@ -217,6 +216,7 @@ function Dashboard({ category, color, refreshTrigger, users }) {
         </div>
     );
 
+    // Modal content for budget settings.
     const budgetSettingsModal = (
         <div>
             <div className="settings-section">

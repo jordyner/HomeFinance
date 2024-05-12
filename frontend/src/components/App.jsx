@@ -20,6 +20,7 @@ function App() {
                         <Modal isOpen={isModalOpen} toggleModal={toggleModal} closeButtonLabel="Close">
                             <div className='user-info-modal'>
                                 <h3>User Information</h3>
+                                {/* Since user does not have to be implemented, I decided to use Jirka as default */}
                                 <p><b>Name:</b> Jirka</p>
                                 <p><b>Email:</b> jiri.jordan@firma.seznam.cz</p>
                             </div>
