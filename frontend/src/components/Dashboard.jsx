@@ -247,7 +247,7 @@ function Dashboard({ category, color, refreshTrigger, users }) {
                 <h2 className="dashboardTitle">
                     {category}
                 </h2>
-                <div style={{ display: 'flex' }}>
+                <div className='modals'>
                     <IconButton imageUrl={budgetIcon} alt="Budget" onClick={toggleBudgetModal} />
                         <Modal isOpen={isBudgetModalOpen} toggleModal={toggleBudgetModal} closeButtonLabel="Close">
                             {budgetSettingsModal}

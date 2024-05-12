@@ -68,10 +68,6 @@ function Tabs() {
         fetchUsers();
     }, []);
 
-    const addTransaction = () => {
-        setShowForm(true);
-    };
-
     const toggleTransactionModal = () => {
         setTransactionModalOpen(!isTransactionModalOpen);
     };
