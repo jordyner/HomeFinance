@@ -158,3 +158,13 @@
 .remove-budget-button {
     background-color: #f44336; 
 }
+
+.modals {
+    display: flex;
+}
+
+@media screen and (max-width: 500px) {
+    .modals {
+        flex-direction: column; 
+    }
+}
