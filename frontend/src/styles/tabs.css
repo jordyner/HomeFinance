@@ -1,0 +1,165 @@
+.tabs {
+    display: flex;
+}
+
+.tabs button {
+    padding: 10px 20px;
+    margin-right: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.tabs .active {
+    background-color: #eee;
+    border-bottom: 2px solid #000;
+}
+
+.tab-content {
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.dashboard-container {
+    margin-left: 20%;
+    margin-right: 20%;  
+}
+
+.addTransactionButtonContainer {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.select-user-dropdown {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.member-list {
+    max-height: 150px;
+    overflow-y: auto; 
+    margin-bottom: 10px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+}
+
+.user-selection-dropdown {
+    width: 100%;       
+    padding: 8px 10px; 
+    margin: 10px 0;    
+    border: 1px solid #ccc;
+    border-radius: 4px; 
+    background-color: white;
+    font-size: 16px;
+    color: #333;
+}
+
+.user-selection-dropdown:focus {
+    border-color: #0056b3;
+    outline: none;
+}
+
+.add-member-button, .remove-member-button {
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.remove-member-button {
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.remove-member-button {
+    background-color: #f44336;
+}
+
+.user-management-section {
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px;
+}
+
+.user-list-container {
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.05);
+}
+
+li {
+    padding: 8px 16px;
+    border-bottom: 1px solid #eee;
+}
+
+li:last-child {
+    border-bottom: none;
+}
+
+li:hover {
+    background-color: #f0f0f0;
+    cursor: pointer;
+}
+
+.user-selection-dropdown {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.set-budget-button, .remove-budget-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    color: white;
+    outline: none;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.set-budget-button {
+    background-color: #4CAF50;
+}
+
+.set-budget-button:hover {
+    background-color: #45a049;
+}
+
+.remove-budget-button {
+    background-color: #F44336;
+}
+
+.remove-budget-button:hover {
+    background-color: #d73825;
+}

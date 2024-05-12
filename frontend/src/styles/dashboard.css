@@ -1,0 +1,160 @@
+/* dashboard.css */
+.dashboardContainer {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: auto; 
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    max-width: 960px; 
+    width: 100%; 
+}
+
+.dashboardTitle {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    margin: 20px 0 10px;
+    text-align: center;
+    padding: 5px 0;
+    border-bottom: 2px solid #ccc;
+}
+
+.chartContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; 
+}
+
+.dashboardHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.responsiveContainer {
+    width: 100%;
+}
+
+.budgetInfo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%; 
+}
+
+.budgetProgressBar {
+    background-color: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    height: 20px;
+    width: 100%;
+    display: flex;
+}
+
+.progress {
+    height: 100%;
+    transition: width 0.5s ease-in-out;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    padding-left: 5px;
+}
+
+.used {
+    width: 50%; 
+}
+
+.remaining {
+    background-color: #ccc;
+    color: black;
+    width: 50%; 
+}
+
+.budgetPercentage {
+    margin-left: 10px;
+    font-size: 16px;
+}
+
+.createBudgetButton {
+    padding: 10px 20px;
+    background-color: #8884d8;
+    color: black;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.segmented-button {
+    background-color: transparent;
+    color: #333;
+    border: none;
+    padding: 0px 15px;
+    font-size: 15px;
+    cursor: pointer;
+    position: relative;
+    margin: 10px 5px;
+    transition: color 0.2s;
+}
+
+.segmented-button:hover,
+.segmented-button.active {
+    color: #0056b3;
+}
+
+.segmented-button.active::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 2px;
+    background-color: #0056b3;
+}
+
+.budget-input {
+    padding: 10px;
+    margin: 10px 0;
+    width: 100%;
+    box-sizing: border-box; 
+}
+
+.set-budget-button, .remove-budget-button {
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: #4CAF50; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.remove-budget-button {
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: #f44336; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.remove-budget-button {
+    background-color: #f44336; 
+}
